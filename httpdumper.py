@@ -18,7 +18,12 @@ class Counter:
         ctx.log.info("We've seen %d flows" % self.num)
 
         print(flow.request.url)
-        f.write(flow.request.url+'\n')
+        data = {
+            'url':flow.request.url,
+            'method':flow.request.method,
+            'host':flow.request.host,
+        }
+        f.write(json.dumps(data)+'\n')
         f.flush()
 
 addons = [
