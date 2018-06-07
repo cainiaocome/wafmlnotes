@@ -2,6 +2,10 @@
 
 '''
     pydoc mitmproxy.http
+
+    howto example:
+    
+    mitmdump --listen-host 127.0.0.1 --listen-port 8000 -s httpdumper.py
 '''
 
 import json
